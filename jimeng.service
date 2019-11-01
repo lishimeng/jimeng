@@ -1,0 +1,14 @@
+[Unit]
+Description=Jimeng Water Iot Server
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/usr/local/jimeng
+ExecStart=/usr/local/jimeng/jimeng
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

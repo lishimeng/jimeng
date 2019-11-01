@@ -1,0 +1,22 @@
+
+name = "Ji Meng Iot Server"
+
+version = "1.0.0"
+
+[db]
+name = "sensordata"
+url = "http://192.168.1.12:8086"
+
+[mqtt]
+broker = "tcp://192.168.1.12:1883"
+client-id = "jimeng_iot_server"
+subscribe = "application/%s/device/+/rx"
+upstream = "application/%s/device/%s/tx"
+#switch-id = "0fb7789000000a60"
+switch-id = "01f7d46000000a31"
+switch-app-id = "4"#有状态开关APP(环境温湿度采集 /浇水开关)
+soil-app-id = "6"#土壤湿度采集app
+smoke-app-id = "10"#烟感采集app
+
+[web]
+listen = ":7321"
